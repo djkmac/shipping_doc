@@ -1,0 +1,31 @@
+// _mixins.scss
+
+@mixin border-radius($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0, $all-sides: true)
+{
+    @if $top-left != 0 and $all-sides == true
+    {
+        border-radius: $top-left;
+    } 
+    @else 
+    {
+        @if $top-left != 0
+        {
+            border-top-left-radius: $top-left;
+        }
+
+         @if $top-right != 0
+        {
+            border-top-right-radius: $top-right;
+        }  
+
+        @if $bottom-left != 0
+        {
+            border-bottom-left-radius: $bottom-left;
+        }
+
+         @if $bottom-right != 0
+        {
+            border-bottom-right-radius: $bottom-right;
+        } 
+    }
+}
